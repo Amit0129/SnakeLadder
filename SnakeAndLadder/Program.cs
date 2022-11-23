@@ -9,12 +9,13 @@
 
             int WIN_POSITION = 100;
             int position = 0;
+            int diceCount = 0;
             Console.WriteLine("Playear position now is {0}", position);
             Random random = new Random();
 
             while (position < WIN_POSITION)
             {
-
+                diceCount++;
 
                 int rollDice = random.Next(1, 7);
                 Console.WriteLine($"The value of dice after roll is : {rollDice}");
@@ -40,6 +41,7 @@
                         break;
                 }
             }
+            Console.WriteLine($"Total number of dice played to win is : {diceCount}");
         }
     }
 }

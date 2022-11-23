@@ -10,11 +10,13 @@ namespace SnakeAndLadder
     {
         public int NoPlay(int position)
         {
+            Console.WriteLine("No Play");
             Console.WriteLine( $"The Player position is : {position}");
             return position;
         }
         public int Ladder(int position, int roll,int winPosition)
         {
+            Console.WriteLine("Ladder");
             position += roll;
             if (position>winPosition)
             {
@@ -25,6 +27,7 @@ namespace SnakeAndLadder
         }
         public int Snake(int position, int roll)
         {
+            Console.WriteLine("Snake");
             position -= roll;
             if (position < 0)
             {
