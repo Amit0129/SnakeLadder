@@ -2,15 +2,17 @@
 {
     internal class Program
     {
+        
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Snake And Ladder Game");
 
+            int WIN_POSITION = 100;
             int position = 0;
             Console.WriteLine("Playear position now is {0}", position);
             Random random = new Random();
 
-            while (position < 100)
+            while (position < WIN_POSITION)
             {
 
 
@@ -30,7 +32,7 @@
                         break;
                     case 2:
                         //controler.Ladder(position, rollDice);
-                        position = controler.Ladder(position, rollDice);
+                        position = controler.Ladder(position, rollDice, WIN_POSITION);
                         break;
                     case 3:
                         //controler.Snake(position, rollDice);

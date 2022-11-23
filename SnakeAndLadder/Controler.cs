@@ -13,9 +13,13 @@ namespace SnakeAndLadder
             Console.WriteLine( $"The Player position is : {position}");
             return position;
         }
-        public int Ladder(int position, int roll)
+        public int Ladder(int position, int roll,int winPosition)
         {
             position += roll;
+            if (position>winPosition)
+            {
+                position -= roll;
+            }
             Console.WriteLine("Playear position now is {0}", position);
             return position;
         }
